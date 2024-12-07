@@ -1,34 +1,40 @@
 /* Fonte e Reset Básico */
 body {
-    font-family: "Montserrat", serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2c2f33;
-    color: #eaeaea;
+    background-color: #2C3E50; /* Fundo escuro */
+    color: #ECF0F1; /* Texto claro */
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
-    background-color: #23272a;
+    background-color: #34495E;  /* Fundo cinza escuro */
     padding: 20px 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
 /* Títulos */
 h1 {
     text-align: center;
-    color: #43b581;
+    color: #1ABC9C; /* Verde claro */
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-h2, h3 {
+h2 {
     text-align: center;
-    color: #99aab5;
+    color: #BDC3C7; /* Cinza claro */
     font-weight: 400;
     margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 30px;
+    color: #1ABC9C; /* Verde claro */
+    text-align: center;
 }
 
 /* Formulário */
@@ -44,34 +50,81 @@ form {
 
 label {
     font-weight: 600;
-    margin-bottom: 6px;
-    color: #99aab5;
+    margin-bottom: 5px;
+    color: #BDC3C7; /* Cinza claro */
 }
 
 input, select, button {
-    padding: 10px;
+    padding: 12px;
     font-size: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid #7F8C8D; /* Cinza médio */
     border-radius: 5px;
     transition: all 0.3s ease;
+    background-color: #2C3E50; /* Fundo escuro para inputs */
+    color: #ECF0F1; /* Texto claro nos campos */
 }
 
 input:focus, select:focus {
-    border-color: #43b581;
+    border-color: #16A085; /* Verde claro ao focar */
     outline: none;
-    box-shadow: 0 0 4px rgba(67, 181, 129, 0.5);
+    box-shadow: 0 0 4px rgba(22, 160, 133, 0.3);
 }
 
 button {
-    background-color: #43b581;
+    background-color: #16A085; /* Verde para botões */
     color: white;
     cursor: pointer;
     font-weight: 600;
     border: none;
+    transition: background-color 0.3s ease;
+    padding: 12px 20px;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #3ca374;
+    background-color: #1ABC9C; /* Verde mais claro no hover */
+}
+
+/* Caixa de Filtro */
+#filter-controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#filter-controls label {
+    font-weight: 600;
+    margin-right: 10px;
+    color: #BDC3C7; /* Cinza claro */
+}
+
+#filter-controls select {
+    padding: 8px;
+    border: 1px solid #7F8C8D;
+    border-radius: 5px;
+    background-color: #2C3E50; /* Fundo escuro */
+    color: #ECF0F1; /* Texto claro */
+}
+
+/* Totais */
+#totals-container {
+    margin: 20px 0;
+    background: #34495E; /* Cinza escuro */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#totals-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#totals-container ul li {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #ECF0F1; /* Texto claro */
 }
 
 /* Tabela */
@@ -79,38 +132,51 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background: #2c2f33;
-    color: #eaeaea;
+    background: #34495E; /* Cinza escuro */
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 table thead {
-    background-color: #43b581;
+    background-color: #1ABC9C; /* Verde claro */
     color: white;
 }
 
 table th, table td {
-    padding: 10px;
+    padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #7F8C8D; /* Cinza médio */
 }
 
 table tbody tr:nth-child(even) {
-    background-color: #23272a;
+    background-color: #2C3E50; /* Fundo escuro alternado */
 }
 
+/* Botão de Exclusão */
 button.delete-btn {
-    background-color: #f04747;
+    background-color: #E74C3C; /* Vermelho para exclusão */
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button.delete-btn:hover {
-    background-color: #a83636;
+    background-color: #C0392B; /* Vermelho mais escuro no hover */
+}
+
+/* Gráfico */
+canvas {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    background: #34495E; /* Fundo escuro */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Responsividade */
@@ -119,11 +185,76 @@ button.delete-btn:hover {
         padding: 15px;
     }
 
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
     form {
         grid-template-columns: 1fr;
     }
 
     table {
         font-size: 0.9em;
+    }
+
+    #filter-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #filter-controls select, #filter-controls button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .form-group input,
+    .form-group select,
+    button {
+        width: 100%;
+    }
+
+    #totals-container ul li {
+        font-size: 1em;
+    }
+
+    .delete-btn {
+        padding: 8px 15px;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    #totals-container ul li {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .form-group input,
+    .form-group select,
+    button {
+        padding: 12px;
     }
 }
