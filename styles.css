@@ -1,6 +1,6 @@
 /* Fonte e Reset Básico */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Montserrat", serif;
     margin: 0;
     padding: 0;
     background-color: #2c2f33;
@@ -44,7 +44,7 @@ form {
 
 label {
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     color: #99aab5;
 }
 
