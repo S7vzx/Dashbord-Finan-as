@@ -136,6 +136,7 @@ table {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    table-layout: fixed; /* Tabela fixa para melhor responsividade */
 }
 
 table thead {
@@ -147,6 +148,7 @@ table th, table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #7F8C8D; /* Cinza médio */
+    word-wrap: break-word; /* Garante que o conteúdo não ultrapasse as células */
 }
 
 table tbody tr:nth-child(even) {
@@ -267,4 +269,3 @@ canvas {
         padding: 12px;
     }
 }
-
