@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
     <div class="container">
         <h1>FinTrack</h1>
@@ -40,19 +38,25 @@
             <button type="submit" class="btn">Adicionar Dívida</button>
         </form>
 
-        <!-- Filtro de status -->
-        <div class="filter-group">
-            <label for="status-filter">Filtrar por Status</label>
-            <select id="status-filter">
-                <option value="all">Todos</option>
-                <option value="Pendente">Pendente</option>
-                <option value="Paga">Paga</option>
-            </select>
-            <button id="filter-btn" class="btn-filter">Filtrar</button>
+        <!-- Totais por Status -->
+        <div id="totals-container">
+            <h3>Totais por Status</h3>
+            <ul id="totals-list">
+                <!-- Os totais serão exibidos aqui -->
+            </ul>
         </div>
 
         <!-- Tabela de dívidas -->
         <h3>Lista de Dívidas</h3>
+        <div id="filter-controls">
+            <label for="filter-status">Filtrar por Status:</label>
+            <select id="filter-status">
+                <option value="Todos">Todos</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Paga">Paga</option>
+            </select>
+            <button id="filter-btn" class="btn">Filtrar</button>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -68,15 +72,11 @@
             </tbody>
         </table>
 
-        <!-- Gráfico de dívidas -->
+        <!-- Gráfico de Estatísticas -->
         <h3>Estatísticas de Dívidas</h3>
-        <canvas id="debtChart"></canvas>
-
-        <!-- Notificação -->
-        <div id="toast" class="toast">Dívida adicionada com sucesso!</div>
+        <canvas id="debt-chart" width="400" height="200"></canvas>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
