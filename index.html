@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>FinTrack</h1>
+        <h2>Controle Suas Dívidas de Forma Inteligente</h2>
+
+        <!-- Formulário para adicionar dívida -->
+        <form id="debt-form">
+            <div class="form-group">
+                <label for="description">Descrição</label>
+                <input type="text" id="description" placeholder="Descrição" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Valor (R$)</label>
+                <input type="number" id="amount" step="0.01" placeholder="0.00" required>
+            </div>
+            <div class="form-group">
+                <label for="due-date">Data de Vencimento</label>
+                <input type="date" id="due-date" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status">
+                    <option value="Pendente">Pendente</option>
+                    <option value="Paga">Paga</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Adicionar Dívida</button>
+        </form>
+
+        <!-- Filtro de status -->
+        <div class="filter-group">
+            <label for="status-filter">Filtrar por Status</label>
+            <select id="status-filter">
+                <option value="all">Todos</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Paga">Paga</option>
+            </select>
+            <button id="filter-btn" class="btn-filter">Filtrar</button>
+        </div>
+
+        <!-- Tabela de dívidas -->
+        <h3>Lista de Dívidas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Data de Vencimento</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="debt-list">
+                <!-- As dívidas serão exibidas aqui -->
+            </tbody>
+        </table>
+
+        <!-- Gráfico de dívidas -->
+        <h3>Estatísticas de Dívidas</h3>
+        <canvas id="debtChart"></canvas>
+
+        <!-- Notificação -->
+        <div id="toast" class="toast">Dívida adicionada com sucesso!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
