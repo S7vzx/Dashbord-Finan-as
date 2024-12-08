@@ -102,3 +102,7 @@ filterBtn.addEventListener("click", () => {
 
 // Inicializar
 renderDebts();
+// Navegar para a página de login
+function navigateToLogin() {
+    window.location.href = "login.html"; // Substitua "login.html" pela URL correta.
+}
