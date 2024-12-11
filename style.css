@@ -205,7 +205,8 @@ header {
     font-weight: 600;
 }
 
-.login-btn {
+.login-btn,
+.register-btn {
     background-color: #28a745;
     color: white;
     font-weight: 600;
@@ -215,9 +216,11 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    margin-left: 10px; /* Espaçamento entre os botões */
 }
 
-.login-btn:hover {
+.login-btn:hover,
+.register-btn:hover {
     background-color: #218838;
 }
 
@@ -228,7 +231,8 @@ header {
         justify-content: space-between;
     }
 
-    .login-btn {
+    .login-btn,
+    .register-btn {
         flex-shrink: 0;
         padding: 10px 20px;
     }
@@ -264,7 +268,8 @@ header {
         font-size: 1em;
     }
 
-    .login-btn {
+    .login-btn,
+    .register-btn {
         flex-shrink: 0;
         padding: 10px 20px;
     }
