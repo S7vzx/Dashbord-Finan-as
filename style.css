@@ -278,3 +278,6 @@ header {
 body {
     padding-top: 70px;
 }
+.botão{
+    outline: none;
+}
