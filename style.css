@@ -216,7 +216,9 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
-    margin-left: 10px; /* Espaçamento entre os botões */
+    margin-left: 10px;
+    text-decoration: none;
+    
 }
 
 .login-btn:hover,
@@ -277,7 +279,4 @@ header {
 
 body {
     padding-top: 70px;
-}
-.botão{
-    outline: none;
 }
